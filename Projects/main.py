@@ -2,7 +2,7 @@
 import pandas as pd
 
 class Main:
-    df = pd.read_csv("Projects/netflix_titles.csv", encoding='latin-1')
+    df = pd.read_csv("netflix-movie-series-rec-main/Projects/netflix_titles.csv", encoding='latin-1')
     df['director'] = df['director'].fillna(0)
     df['cast'] = df['cast'].fillna(0)
     df['country'] = df['country'].fillna(0)
@@ -13,8 +13,8 @@ class Main:
                'Unnamed: 24', 'Unnamed: 25']
     df = df.drop(columns=Unnamed, axis=1)
 
-    country_list = pd.read_excel("Projects/Country.xlsx")
-    genres_list = pd.read_excel("Projects/Genres.xlsx")
+    country_list = pd.read_excel("netflix-movie-series-rec-main/Projects/Country.xlsx")
+    genres_list = pd.read_excel("netflix-movie-series-rec-main/Projects/Genres.xlsx")
     filters_list = []
 
     def __init__(self):
